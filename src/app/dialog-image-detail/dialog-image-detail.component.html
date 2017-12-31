@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Hi {{data.created}}</h1>
+<div mat-dialog-content>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{data.user.name}}</mat-card-title>
+      <mat-card-subtitle>@{{data.user.username}}</mat-card-subtitle>
+      <img alt="image" src="{{data.user.profile_image.small}}"/>
+    </mat-card-header>
+    <mat-card-content><p>Hi there</p>
+      <img alt="image" mat-card-image><p>	Card image. Stretches the image to the container width.</p>
+    </mat-card-content>
+    <mat-card-actions>	Container for buttons at the bottom of the card</mat-card-actions>
+    <mat-card-footer>footer</mat-card-footer>
+  </mat-card>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>

@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav>
+    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    <p>
+      <mat-radio-group class="example-radio-group">
+        <label>Mode:</label>
+        <mat-radio-button value="over">Over</mat-radio-button>
+        <mat-radio-button value="side">Side</mat-radio-button>
+        <mat-radio-button value="push">Push</mat-radio-button>
+      </mat-radio-group>
+    </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()"><i class="material-icons">&#xE5D2;</i></button>
+        <span>{{title}}</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon">favorite</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div style="text-align:center">
+      <!--<mat-toolbar>-->
+      <!--<span>{{title}}</span>-->
+      <!--</mat-toolbar>-->
+      <nav>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/todos">List of todo's</a>
+      </nav>
+    </div>
+    <!--<app-todo></app-todo>-->
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

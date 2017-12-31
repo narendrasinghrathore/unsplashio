@@ -1,0 +1,13 @@
+<div>
+  <mat-grid-list cols="{{photoGrid.col.size}}" rowHeight="{{photoGrid.row.height}}"
+                 gutterSize="{{photoGrid.gutterSize}}">
+    <mat-grid-tile *ngFor="let photo of photoList" rowspan="1">
+      <!--photoGrid.row.height-->
+      <!--photoGrid.tile.rowspan()-->
+      <!--<mat-card (click)="openDialog(photo)">-->
+      <img id="{{photo.id}}" (click)="openDialog(photo)" src="{{photo.urls.thumb}}"/>
+      <!--mat-card-image-->
+      <!--</mat-card>-->
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

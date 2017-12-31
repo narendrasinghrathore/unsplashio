@@ -1,0 +1,9 @@
+<div>
+
+  <ul class="todo-list">
+    <li *ngFor="let item of list" id={{item.id}} (click)="onSelect(item)" [class.selected]="item === selectedItem">
+      <a routerLink="/detail/{{item.id}}"><span class="badge">{{item.id}}</span> {{item.name | uppercase}}</a>
+
+    </li>
+  </ul>
+</div>

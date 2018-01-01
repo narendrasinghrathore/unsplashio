@@ -41,7 +41,6 @@ export class PhotoCardListComponent implements OnInit {
 
   ngAfterViewInit() {
     this.http.getSampleData().subscribe(data => {
-      console.log(data);
       this.photoList = data;
     })
   }
